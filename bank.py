@@ -1,6 +1,6 @@
 #Simple bank app
 import random
-#Initial page
+#Initializing app
 database = {}
 def init():
 
@@ -77,6 +77,7 @@ def transaction(user):
         print("Invalid Selection")
         transaction(user)
 
+#Account balance check
 def account_balance_function(user):
     print("Your account balance is %i" %user[4])
     option = False
@@ -92,7 +93,7 @@ def account_balance_function(user):
         else:
             print("Inavlid option selected")
 
-
+#Withdrawal
 def withdrawal(user):
     withdrawal_amount = int(input("How much would you like to withdraw? \n"))
     if (withdrawal_amount > user[4]):
@@ -113,7 +114,7 @@ def withdrawal(user):
             exit()
         else:
             print("select a valid option")
-
+#Deposit
 def deposit():
     deposit = int(input("How much would you like to deposit? \n"))
     account_balance = account_balance + deposit
@@ -133,7 +134,7 @@ def deposit():
 
 
 
-
+#Account number generator
 def accountNumberGenerator():
     return random.randrange(1111111111,9999999999)
 
